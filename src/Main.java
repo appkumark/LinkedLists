@@ -1,4 +1,5 @@
 import linkedLists.Employee;
+import linkedLists.EmployeeLinkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,5 +9,21 @@ public class Main {
         Employee marySmith = new Employee("Mary", "Smith", 22);
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
 
+        EmployeeLinkedList list = new EmployeeLinkedList();
+
+        System.out.println(list.isEmpty());
+
+        list.addToFront(janeJones);
+        list.addToFront(johnDoe);
+        list.addToFront(marySmith);
+        list.addToFront(mikeWilson);
+
+        System.out.println(list.getSize());
+
+        list.printList();
+
+        list.removeFromFront();
+        System.out.println(list.getSize());
+        list.printList();
     }
 }
