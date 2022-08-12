@@ -8,6 +8,8 @@ public class Main {
         Employee johnDoe = new Employee("John", "Doe", 4567);
         Employee marySmith = new Employee("Mary", "Smith", 22);
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
+        Employee billEnd = new Employee("Bill", "End", 78);
+
 
         EmployeeLinkedList list = new EmployeeLinkedList();
 
@@ -24,6 +26,12 @@ public class Main {
 
         list.removeFromFront();
         System.out.println(list.getSize());
+        list.printList();
+
+        list.addBefore(billEnd, johnDoe);
+        list.printList();
+
+        list.addBefore(new Employee("Someone", "Else", 111), mikeWilson);
         list.printList();
     }
 }
